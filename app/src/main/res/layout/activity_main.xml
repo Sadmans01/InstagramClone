@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,75 +8,62 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <RelativeLayout
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" >-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView3"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            app:srcCompat="@drawable/nav_logo_whiteout" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView4"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginTop="4dp"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            app:srcCompat="@drawable/ufi_comment" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView5"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_centerInParent="false"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginEnd="68dp"-->
+<!--            app:srcCompat="@drawable/ufi_heart" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView6"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginTop="6dp"-->
+<!--            android:layout_marginEnd="124dp"-->
+<!--            app:srcCompat="@drawable/instagram_new_post_outline_24"-->
+<!--            tools:layout_centerInParent="true" />-->
+<!--    </RelativeLayout>-->
+
+    <FrameLayout
+        android:id="@+id/flContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"
+        />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            app:srcCompat="@drawable/nav_logo_whiteout" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="8dp"
-            app:srcCompat="@drawable/ufi_comment" />
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_centerInParent="false"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="68dp"
-            app:srcCompat="@drawable/ufi_heart" />
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="6dp"
-            android:layout_marginEnd="124dp"
-            app:srcCompat="@drawable/instagram_new_post_outline_24"
-            tools:layout_centerInParent="true" />
-    </RelativeLayout>
-
-    <EditText
-        android:id="@+id/etDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Description..." />
-
-    <Button
-        android:id="@+id/btnCaptureImage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#9C37B0"
-        android:text="Take Picture" />
-
-    <ImageView
-        android:id="@+id/ivPostImage"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <Button
-        android:id="@+id/btnSubmit"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#9C37B0"
-        android:text="Submit" />
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_bottom_navigation" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -86,34 +73,36 @@
             android:id="@+id/btnLogOut"
             android:layout_width="wrap_content"
             android:layout_height="68dp"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="4dp"
-            android:layout_marginBottom="4dp"
+            android:layout_marginTop="138dp"
+            android:layout_marginEnd="7dp"
             android:backgroundTint="#9C37B0"
             android:text="LOG OUT" />
 
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="8dp"
-            android:layout_marginBottom="2dp"
-            app:srcCompat="@drawable/instagram_home_filled_24" />
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView7"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:layout_marginBottom="2dp"-->
+<!--            app:srcCompat="@drawable/instagram_home_filled_24" />-->
 
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="152dp"
-            android:layout_marginBottom="4dp"
-            android:backgroundTint="@color/black"
-            app:srcCompat="@android:drawable/ic_search_category_default" />
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView9"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginStart="152dp"-->
+<!--            android:layout_marginBottom="4dp"-->
+<!--            android:backgroundTint="@color/black"-->
+<!--            app:srcCompat="@android:drawable/ic_search_category_default" />-->
 
     </RelativeLayout>
 
-</LinearLayout>
+
+
+</RelativeLayout>
