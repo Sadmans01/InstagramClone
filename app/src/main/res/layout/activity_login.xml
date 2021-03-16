@@ -12,6 +12,7 @@
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
         android:layout_weight="1"
         app:srcCompat="@drawable/nav_logo_whiteout" />
 
@@ -19,18 +20,24 @@
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:layout_weight="1"
         android:ems="10"
-        android:hint="username" />
+        android:hint="username"
+        android:textColor="@color/purple_500"
+        android:textColorHint="@color/purple_200" />
 
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:layout_weight="1"
         android:ems="10"
         android:hint="password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textColor="@android:color/holo_orange_light"
+        android:textColorHint="@android:color/holo_red_light" />
 
     <Button
         android:id="@+id/btnLogin"
@@ -47,12 +54,5 @@
         android:layout_weight="1"
         android:backgroundTint="#6dc993"
         android:text="Sign Up" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="278dp"
-        android:layout_weight="1"
-        app:srcCompat="@drawable/icon" />
 
 </LinearLayout>
